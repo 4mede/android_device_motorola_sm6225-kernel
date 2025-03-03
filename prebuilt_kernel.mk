@@ -15,10 +15,3 @@ BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_KERNEL_PATH)/dtbo.img
 BOARD_PREBUILT_DTBIMAGE_DIR := $(DEVICE_KERNEL_PATH)/dtb
 TARGET_PREBUILT_KERNEL := $(DEVICE_KERNEL_PATH)/kernel
 
-# Copy out modules
-PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,$(DEVICE_KERNEL_PATH)/modules/vendor/,$(TARGET_COPY_OUT_VENDOR)/lib/modules)
-
-PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,$(DEVICE_KERNEL_PATH)/modules/vendor_ramdisk/,$(TARGET_COPY_OUT_VENDOR_RAMDISK)/lib/modules)
-
